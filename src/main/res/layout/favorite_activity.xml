@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fui_transparent"
+            android:src="@drawable/ic_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/btnFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/fui_transparent"
+            android:src="@drawable/ic_baseline_un_fav_24" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/quananImg"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/n_bg"
+                    android:src="@drawable/girl" />
+
+                <TextView
+                    android:id="@+id/txtTenQuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:layout_toRightOf="@+id/quananImg"
+                    android:text="Tên quán"
+                    android:textColor="@color/black"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/txtMoTa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTenQuan"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:layout_toRightOf="@+id/quananImg"
+                    android:text="Mô tả"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtMoTa"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/txtGioHoatDong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:layout_toRightOf="@+id/quananImg"
+                    android:text="00:00-00:00"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtGioHoatDong"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/txtViTri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:layout_toRightOf="@+id/quananImg"
+                    android:text="10.99999999999999-10.9999999999999"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtViTri"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toEndOf="@+id/quananImg"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:text="Thực đơn"
+                android:textColor="@color/green_500"
+                android:textSize="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gridviewMonAn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:horizontalSpacing="8dp"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="8dp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

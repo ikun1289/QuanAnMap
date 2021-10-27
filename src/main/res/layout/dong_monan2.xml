@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="5dp"
+    app:cardElevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imvMonAn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/rounded_corners_white" />
+
+        <TextView
+            android:id="@+id/txtTenMonAn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="tên món ăn"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtMoTaMonAn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="9dp"-->
+        <!--            android:text="mô tả"-->
+        <!--            android:textStyle="italic" />-->
+
+        <TextView
+            android:id="@+id/txtGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Giá"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
